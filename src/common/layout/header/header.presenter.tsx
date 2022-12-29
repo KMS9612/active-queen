@@ -8,8 +8,8 @@ export default function HeaderPresenter(props: IPropsHeaderPresenter) {
     <Header.Wrapper>
       <Header.Logo src="/header/Logo.png" alt="화면 상단 로고 이미지" />
       <Header.NavWrapper>
-        {props.NavMenu.map((el) => (
-          <Header.NavMenu>{el}</Header.NavMenu>
+        {props.NavMenu.map((el, index) => (
+          <Header.NavMenu key={index}>{el}</Header.NavMenu>
         ))}
       </Header.NavWrapper>
       <Header.BtnWrapper spacing={2} direction="row">
